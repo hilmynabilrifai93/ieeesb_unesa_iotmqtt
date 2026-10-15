@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+.preview/
+config.local.js
+data/
+server/accounts.json
+Dashboard - Topic dan Password.md
+backups/
+*.tar.gz
+.hallmark/
+/main-baru.js
+/main-normal.js
+/public-main.js
+/public-index.html
+/scripts/*browser*.mjs
+/scripts/verify-login-live.mjs
+/scripts/reproduce-profile-menu.mjs

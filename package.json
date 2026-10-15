@@ -1,0 +1,21 @@
+{
+  "name": "ieee-sb-unesa-iot-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Dashboard praktik ESP32 IEEE SB UNESA",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "preview": "node scripts/serve.mjs --dist",
+    "build": "node scripts/build.mjs",
+    "test": "node --test",
+    "verify:mqtt": "node scripts/verify-mqtt.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "mqtt": "^5.16.0"
+  }
+}

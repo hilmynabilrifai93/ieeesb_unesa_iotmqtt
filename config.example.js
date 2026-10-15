@@ -1,0 +1,23 @@
+export const mqttConfig = Object.freeze({
+  url: 'wss://ieee.hint-lab.id/mqtt',
+  username: 'ieeeunesa',
+  password: '',
+  defaultDeviceId: 'esp32-01',
+  devices: [
+    { id: 'esp32-01', name: 'ESP32 Praktik 1' },
+    { id: 'esp32-02', name: 'ESP32 Praktik 2' },
+    { id: 'esp32-03', name: 'ESP32 Praktik 3' },
+    { id: 'esp32-04', name: 'ESP32 Praktik 4' },
+    { id: 'esp32-05', name: 'ESP32 Praktik 5' },
+    { id: 'esp32-06', name: 'ESP32 Praktik 6' },
+    { id: 'esp32-07', name: 'ESP32 Praktik 7' },
+    { id: 'esp32-08', name: 'ESP32 Praktik 8' },
+    { id: 'esp32-09', name: 'ESP32 Praktik 9' },
+    { id: 'esp32-10', name: 'ESP32 Praktik 10' },
+    { id: 'esp32-pengajar-01', name: 'ESP32 Pengajar 1' },
+    { id: 'esp32-pengajar-02', name: 'ESP32 Pengajar 2' },
+    { id: 'esp32-pengajar-03', name: 'ESP32 Pengajar 3' },
+    { id: 'esp32-pengajar-04', name: 'ESP32 Pengajar 4' },
+    { id: 'esp32-pengajar-05', name: 'ESP32 Pengajar 5' },
+  ],
+});

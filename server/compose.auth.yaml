@@ -1,0 +1,27 @@
+services:
+  auth:
+    image: node:20-bookworm-slim
+    container_name: ieee-dashboard-auth
+    restart: unless-stopped
+    working_dir: /app
+    command: node server/start.mjs
+    environment:
+      DASHBOARD_ORIGIN: https://ieee.hint-lab.id
+      ACCOUNTS_FILE: /app/data/accounts.json
+    volumes:
+      - ./gateway:/app:ro
+      - ./data:/app/data:rw
+    networks:
+      - dashboard
+    mem_limit: 128m
+    cpus: 0.5
+    user: "1000:1000"
+    read_only: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+networks:
+  dashboard:
+    external: true
+    name: ieee-dashboard_default
