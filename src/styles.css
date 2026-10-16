@@ -1188,6 +1188,11 @@ button:disabled:hover, [aria-disabled="true"]:hover { background: inherit; color
 .sidebar-account[open] > summary > .icon { transform: rotate(90deg); }
 .account-menu-items button { min-height: 44px; }
 @media (min-width: 761px) {
+  .sidebar { overflow-y: auto; }
+  .sidebar > .brand, .sidebar > .sidebar-label, .sidebar > nav { flex-shrink: 0; }
+  .sidebar-bottom { display: flex; flex-direction: column; flex: 1; min-height: 0; padding-top: 20px; }
+  .sidebar .device-summary { min-height: 0; overflow-y: auto; margin-top: auto; }
+  .sidebar-account { flex-shrink: 0; }
   .sidebar-account .account-menu-items { position: absolute; left: 0; right: 0; bottom: calc(100% + 8px); margin-top: 0; z-index: 10; box-shadow: 0 6px 20px var(--color-scrim); }
   .sidebar-collapsed .sidebar-account .account-identity, .sidebar-collapsed .sidebar-account > summary > .icon { display: none; }
   .sidebar-collapsed .sidebar-account > summary { justify-content: center; }

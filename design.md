@@ -65,3 +65,34 @@ Permukaan menggunakan charcoal netral agar aksen teal menunjukkan tindakan dan s
 ## Typography refinement - 2026-10-13
 
 Design Read: existing technical editorial workbench for classroom sensor reading and device control. ENERGY 1 / RHYTHM 1 / MOTION 1; existing navigation gestures retained. Structure, grids, order and functionality stay as established. Green Bahnschrift title remains the identity; section/control headings use the system body face at 16px/600, labels 13px/500, supporting copy 12px/400 with 1.5 line-height, metadata 10px. Title scales 30?38px at 600 with -.025em tracking. Monospaced tabular sensor values keep changing digits stable. Secondary hardware labels and counts use neutral text without decorative badge fills. No font download, dependency, new asset or animation.
+
+## Revisi visual 2026-10-16
+
+Status: historis, dibatalkan oleh permintaan pemulihan tema hijau pada 2026-10-16. Referensi pengguna saat revisi ini: https://monitoringiotkit.imitech.my.id/. Isi, aset logo IEEE, navigasi, serta logika login dan kontrol tetap mengikuti dashboard IEEE.
+
+Design Read: dashboard praktikum IoT untuk mahasiswa, dengan garis dan bentuk tegas seperti referensi IMITECH. ENERGY 3 / RHYTHM 2 / MOTION 1.
+
+- Canvas terang `#fafaf7`, panel putih, teks `#141414`, teks sekunder `#595953`, garis `#242424`.
+- Kuning `#ffdf47` menandai pilihan aktif; magenta `#d90062` menandai aksi utama. Sidebar desktop gelap memisahkan navigasi dari area praktik.
+- Dark mode memakai canvas `#111111`, panel `#1d1d1b`, teks `#fafaf5`, garis `#cecec4`, dan aksen magenta terang `#ff80b8`.
+- Syne Bold dipakai untuk judul agar mengikuti karakter tipografi referensi. Isi tetap memakai Segoe UI; angka sensor memakai Courier New untuk digit yang stabil. Font disimpan lokal beserta lisensi SIL OFL.
+- Sudut kotak dan garis 2 px membedakan panel dan kontrol. Bayangan solid pada sensor memberi penekanan pada pembacaan; bayangan tombol utama dan dialog membedakan elemen yang dapat ditindaklanjuti.
+- Grid sensor memakai empat kolom pada desktop lebar, dua pada tablet/ponsel, dan satu pada layar di bawah 380 px. Kontrol menjadi satu kolom pada ponsel; navigasi bawah menyisakan ruang konten.
+- Ikon sensor dan ilustrasi aktuator yang sudah ada tetap dipakai untuk menunjukkan jenis komponen. Tidak ada aset ilustrasi atau fitur tambahan.
+- Fokus keyboard memakai outline 3 px. Tidak ada animasi masuk; preferensi reduced motion tetap dihormati.
+
+Implementasi berada di `src/redesign.css`, setelah stylesheet dasar. Perubahan tema tidak mengubah modul JavaScript.
+
+## Liquid glass interaktif 2026-10-16
+
+Status: historis, styling IMITECH pada bagian ini dibatalkan oleh pemulihan tema hijau di bawah.
+
+Atas permintaan lanjutan pengguna, dua kontrol menjadi pengecualian dari bentuk kotak: pemilih Simulasi/MQTT dan navigasi bawah HP memakai kapsul liquid glass. Transparansi, rim highlight, dan lensa yang mengikuti jari menunjukkan posisi pilihan selama drag. Tint kuning mengikuti tema baru; dark mode memakai lensa gelap dengan highlight hangat. ENERGY 3 / RHYTHM 2 / MOTION 2 hanya pada dua kontrol ini; gerak lain tetap seperti sebelumnya.
+
+Gesture memakai `installGlassDrag` yang sudah ada: horizontal drag di-preview lalu dikonfirmasi saat release, vertical scroll diteruskan, cancel kembali ke pilihan aktif. Tap dan keyboard tetap menjadi alternatif. Reduced motion, reduced transparency, forced colors, serta fallback tanpa backdrop blur dipertahankan. Tidak ada perubahan logika MQTT, API, isi, atau dependency.
+
+## Pemulihan tema hijau 2026-10-16
+
+Keputusan terbaru pengguna membatalkan tema IMITECH dan mengembalikan tampilan sebelum revisi tersebut. Seluruh halaman kembali menggunakan stylesheet dasar `src/styles.css`, dengan penyesuaian tinggi sidebar desktop yang dijelaskan di bawah. Palet hijau/teal, tipografi sistem, bentuk panel, light/dark mode, dan gesture kembali mengikuti keputusan 2026-10-13 di atas. ENERGY 1 / RHYTHM 1 / MOTION 1, dengan transisi pemilih yang sudah ada.
+
+Stylesheet tambahan dan font Syne tidak dimuat atau disertakan dalam source aktif. Tidak ada perubahan modul JavaScript, MQTT, autentikasi, atau konten. Masalah akun terpotong juga direproduksi pada tema lama di viewport pendek: area status desktop dibuat dapat menyusut dan di-scroll, sementara menu akun mempertahankan ruangnya. Penyesuaian ini tidak mengganti warna, bentuk komponen, atau navigasi tema lama.

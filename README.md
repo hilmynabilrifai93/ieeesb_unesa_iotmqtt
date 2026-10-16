@@ -2,6 +2,12 @@
 
 Frontend statis untuk mencoba tampilan dan kontrol praktikum ESP32. Dibuat dengan HTML, CSS, JavaScript, dan MQTT.js.
 
+## Tampilan
+
+Tampilan hijau sebelum revisi IMITECH dipulihkan pada 16 Oktober 2026 sesuai permintaan pengguna. Seluruh tampilan kembali memakai `src/styles.css`, termasuk login, sidebar, dan dashboard. Light/dark mode serta gesture geser pada pemilih Simulasi/MQTT dan navigasi bawah ponsel tetap mengikuti implementasi semula. Isi, autentikasi, dan logika perangkat tidak berubah.
+
+Pada desktop, ruang menu akun dipertahankan ketika viewport pendek; isi status perangkat dapat di-scroll agar akun tidak terdorong keluar layar.
+
 ## Menjalankan
 
 Gunakan Node.js 18 atau lebih baru. Buka terminal di folder proyek.

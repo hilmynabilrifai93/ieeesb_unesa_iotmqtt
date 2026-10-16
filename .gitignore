@@ -17,3 +17,15 @@ backups/
 /scripts/*browser*.mjs
 /scripts/verify-login-live.mjs
 /scripts/reproduce-profile-menu.mjs
+.env
+.env.*
+!.env.example
+!.env.sample
+*.pem
+*.key
+*.p12
+*.pfx
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
